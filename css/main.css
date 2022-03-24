@@ -12,7 +12,7 @@
   box-sizing: border-box;
 }
 :root {
-  --bluecolor: #00c9ab;
+  --bluecolor: #79f7d9;
   --greycolor: #515152;
   --pinkColor: #e94152;
   --htmlTagsFontSize: 20px;
@@ -20,33 +20,42 @@
 ::selection {
   background-color: transparent;
 }
+*::before,
+*::after {
+  font-family: "La Belle Aurore", cursive;
+  font-size: var(--htmlTagsFontSize);
+  color: var(--greycolor);
+  position: absolute;
+}
+
 html {
   scroll-behavior: smooth;
   background-color: #1d1d1d;
+  color: white;
 }
 body {
-  font-family: "La Belle Aurore", cursive;
+  font-family: "Montserrat", sans-serif;
   background-color: #1d1d1d;
   position: relative;
-  min-height: 2000px;
+  min-height: 6000px;
+  overflow-x: hidden;
 }
 body::before {
   content: "<html>";
-  display: inline-block;
-  color: var(--greycolor);
-  font-size: var(--htmlTagsFontSize);
-  position: absolute;
   top: 25px;
   left: 170px;
 }
 body::after {
   content: "</html>";
-  display: inline-block;
+  font-family: "La Belle Aurore", cursive;
   color: var(--greycolor);
   font-size: var(--htmlTagsFontSize);
   position: absolute;
   bottom: 25px;
   left: 170px;
+}
+section {
+  margin-left: 140px;
 }
 
 .menu-btn {
@@ -60,7 +69,8 @@ body::after {
   cursor: pointer;
   transition: all 300ms;
 }
-.menu-btn:hover {
+.menu-btn:hover,
+.menu-btn:focus {
   transform: scale(0.9);
 }
 
@@ -70,7 +80,6 @@ body::after {
   padding: 10px 20px;
   top: 15px;
   right: 15px;
-  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   letter-spacing: -2px;
   z-index: 33;
@@ -79,12 +88,32 @@ body::after {
   cursor: pointer;
   transition: all 150ms;
 }
-.sound:hover {
+.sound:hover,
+.sound:focus {
   transform: scale(0.97);
 }
 .sound svg,
 .sound span {
   color: #e94152;
+}
+
+h2 {
+  font-family: "Passion One", cursive;
+  margin-left: 5%;
+  color: var(--bluecolor);
+  font-size: 8vw;
+  position: relative;
+  padding: 15px;
+}
+h2::before {
+  content: "<h2>";
+  top: 0;
+  left: 0;
+}
+h2::after {
+  content: "</h2>";
+  bottom: 0;
+  left: 0;
 }
 
 @media (max-width: 992px), (max-height: 600px) {
@@ -105,6 +134,12 @@ body::after {
     padding: 8px 16px;
     right: unset;
     left: 15px;
+  }
+  section {
+    margin-left: 0px;
+  }
+  h2 {
+    font-size: 12vw;
   }
 }
 
@@ -256,7 +291,6 @@ nav.show {
   overflow: hidden;
   width: 100vw;
   height: 100vh;
-  margin-left: 140px;
   flex-direction: column;
   display: flex;
   justify-content: center;
@@ -271,10 +305,6 @@ nav.show {
   content: "<body>";
   width: 100%;
   height: 100%;
-  color: var(--greycolor);
-  font-size: var(--htmlTagsFontSize);
-  font-family: "La Belle Aurore", cursive;
-  position: absolute;
   top: 50px;
   left: 60px;
   display: block;
@@ -297,11 +327,6 @@ nav.show {
 }
 .hero h1 span:first-of-type::before {
   content: "<h1>";
-  font-family: "La Belle Aurore", cursive;
-  display: inline-block;
-  color: var(--greycolor);
-  font-size: var(--htmlTagsFontSize);
-  position: absolute;
   line-height: unset;
   letter-spacing: -1px;
   top: -50px;
@@ -344,21 +369,11 @@ nav.show {
 
 .hero p::before {
   content: "<p>";
-  font-family: "La Belle Aurore", cursive;
-  display: inline-block;
-  color: var(--greycolor);
-  font-size: var(--htmlTagsFontSize);
-  position: absolute;
   top: 0;
   left: 0;
 }
 .hero p::after {
   content: "</p>";
-  font-family: "La Belle Aurore", cursive;
-  display: inline-block;
-  color: var(--greycolor);
-  font-size: var(--htmlTagsFontSize);
-  position: absolute;
   bottom: 0;
   left: 0;
 }
@@ -398,10 +413,6 @@ nav.show {
 }
 
 @media (max-width: 992px) {
-  .hero {
-    margin-left: 0px;
-  }
-
   .hero h1 {
     color: white;
     font-size: 10vw;
@@ -445,5 +456,83 @@ nav.show {
   }
   .hero h6 svg {
     transform: rotate(90deg);
+  }
+}
+
+/* About Section ----------------------------------------------------------------  */
+
+.about {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+.about::before {
+  content: "Who Am I ?";
+  font-family: "Passion One", cursive;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 5% 0 0 5%;
+  top: 0%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  color: rgba(255, 255, 255, 0.025);
+  font-size: 20vw;
+}
+.about .about-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .about-area img {
+  width: 25%;
+  margin-left: 5%;
+  padding: 15px;
+}
+.about .about-area .about-text {
+  font-family: "Montserrat", sans-serif;
+  margin-left: 5%;
+  padding: 15px;
+  position: relative;
+  max-width: 75%;
+}
+.about .about-area .about-text::before {
+  content: "<p>";
+  top: 0;
+  left: 0;
+}
+.about .about-area .about-text::after {
+  content: "</p>";
+  bottom: 0;
+  left: 0;
+}
+.about .about-area .about-text p {
+  padding: 15px;
+}
+@media (max-width: 992px) {
+  .about::before {
+    margin: 5% 0 0 5%;
+  }
+  .about .about-area {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about .about-area img {
+    width: 70%;
+    max-width: 400px;
+  }
+  .about .about-area .about-text {
+    max-width: none;
+  }
+  .about .about-area .about-text p {
+    font-size: 14px;
   }
 }
