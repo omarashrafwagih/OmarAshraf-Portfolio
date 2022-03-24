@@ -56,6 +56,8 @@ body::after {
 }
 section {
   margin-left: 140px;
+  overflow: hidden;
+  padding-top: 10px;
 }
 
 .menu-btn {
@@ -290,7 +292,7 @@ nav.show {
   position: relative;
   overflow: hidden;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
   display: flex;
   justify-content: center;
@@ -462,7 +464,7 @@ nav.show {
 /* About Section ----------------------------------------------------------------  */
 
 .about {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -492,10 +494,12 @@ nav.show {
 }
 
 .about .about-area img {
-  width: 25%;
+  max-width: 30%;
+  aspect-ratio: 1 / 1;
   margin-left: 5%;
   padding: 15px;
 }
+
 .about .about-area .about-text {
   font-family: "Montserrat", sans-serif;
   margin-left: 5%;
