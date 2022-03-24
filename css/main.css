@@ -498,6 +498,7 @@ nav.show {
   aspect-ratio: 1 / 1;
   margin-left: 5%;
   padding: 15px;
+  border-radius: 30px;
 }
 
 .about .about-area .about-text {
@@ -532,6 +533,7 @@ nav.show {
   .about .about-area img {
     width: 70%;
     max-width: 400px;
+    pointer-events: none;
   }
   .about .about-area .about-text {
     max-width: none;
