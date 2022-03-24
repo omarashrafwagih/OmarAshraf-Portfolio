@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap");
+/* font-family: 'La Belle Aurore', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/* font-family: 'Montserrat', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Passion+One&display=swap");
+/* font-family: 'Passion One', cursive; */
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:root {
+  --bluecolor: #00c9ab;
+  --greycolor: #515152;
+  --pinkColor: #e94152;
+  --htmlTagsFontSize: 20px;
+}
+::selection {
+  background-color: transparent;
+}
+html {
+  scroll-behavior: smooth;
+  background-color: #1d1d1d;
+}
+body {
+  font-family: "La Belle Aurore", cursive;
+  background-color: #1d1d1d;
+  position: relative;
+  min-height: 2000px;
+}
+body::before {
+  content: "<html>";
+  display: inline-block;
+  color: var(--greycolor);
+  font-size: var(--htmlTagsFontSize);
+  position: absolute;
+  top: 25px;
+  left: 170px;
+}
+body::after {
+  content: "</html>";
+  display: inline-block;
+  color: var(--greycolor);
+  font-size: var(--htmlTagsFontSize);
+  position: absolute;
+  bottom: 25px;
+  left: 170px;
+}
+
+.menu-btn {
+  display: none;
+  z-index: 1000;
+  color: white;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  font-size: 26px;
+  cursor: pointer;
+  transition: all 300ms;
+}
+.menu-btn:hover {
+  transform: scale(0.9);
+}
+
+.sound {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  top: 15px;
+  right: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  letter-spacing: -2px;
+  z-index: 33;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 150ms;
+}
+.sound:hover {
+  transform: scale(0.97);
+}
+.sound svg,
+.sound span {
+  color: #e94152;
+}
+
+@media (max-width: 992px), (max-height: 600px) {
+  body.overflow-it {
+    overflow: hidden;
+  }
+  body::before {
+    left: 30px;
+  }
+  body::after {
+    left: 30px;
+  }
+  .menu-btn {
+    display: unset;
+  }
+  .sound {
+    font-size: 16px;
+    padding: 8px 16px;
+    right: unset;
+    left: 15px;
+  }
+}
+
+/* Nav ----------------------------------------------------------------  */
+
+nav {
+  color: white;
+  text-align: center;
+  width: 140px;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  background-color: #181818;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+nav .top {
+  background-color: black;
+  min-height: 170px;
+  padding: 15px 0;
+}
+nav .top .logo {
+  padding: 10px 0;
+  width: 100%;
+  font-size: 100px;
+  color: var(--pinkColor);
+  font-family: "Passion One", cursive;
+  text-shadow: -5px 0px 0px var(--bluecolor);
+  line-height: 60px;
+  transform: translateX(5px);
+  cursor: pointer;
+}
+nav .top .name {
+  font-family: "Passion One", cursive;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+nav .top .profession {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  color: var(--greycolor);
+}
+
+nav .menu {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+nav .menu ul {
+  list-style: none;
+  width: 100%;
+  font-size: 14px;
+}
+nav .menu ul a {
+  text-decoration: none;
+  display: block;
+  color: grey;
+}
+nav .menu ul li {
+  padding: 15px 0;
+  border-bottom: 1px solid rgb(81 81 82 / 50%);
+  transition: all 200ms;
+}
+nav .menu ul li:hover {
+  color: var(--bluecolor);
+}
+
+nav .social {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+nav .social a {
+  width: calc(100% / 3);
+  color: grey;
+  padding: 5%;
+  transition: all 200ms;
+}
+nav .social a:hover {
+  color: var(--bluecolor);
+  transform: translateY(-2px);
+}
+nav.show {
+  display: unset;
+}
+@media (max-width: 992px) {
+  nav {
+    display: none;
+    color: white;
+    text-align: center;
+    width: 100vw;
+    z-index: 999;
+  }
+  nav .social {
+    margin-top: 0px;
+    padding: 0px;
+  }
+  nav .menu ul .empty-list-item {
+    display: none;
+  }
+}
+@media (max-height: 600px) {
+  nav {
+    display: none;
+    color: white;
+    text-align: center;
+    width: 100vw;
+    z-index: 999;
+  }
+
+  nav .top {
+    min-height: unset;
+    padding: 10px 0;
+  }
+  nav .top .logo {
+    padding: 10px 0;
+    font-size: 60px;
+    line-height: 30px;
+    transform: translateX(5px);
+  }
+  nav .menu ul li {
+    padding: 15px 0;
+    border-bottom: 1px solid rgb(81 81 82 / 50%);
+    transition: all 200ms;
+  }
+  nav .social {
+    margin-top: 10px;
+    padding: 0px;
+  }
+  nav .social a {
+    width: calc(100% / 3);
+    padding: 5px;
+    transition: all 200ms;
+  }
+  nav .social a:hover {
+    transform: translateY(0px);
+  }
+}
+
+/* Hero Section ----------------------------------------------------------------  */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  margin-left: 140px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.hero #particles-js {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.hero::before {
+  content: "<body>";
+  width: 100%;
+  height: 100%;
+  color: var(--greycolor);
+  font-size: var(--htmlTagsFontSize);
+  font-family: "La Belle Aurore", cursive;
+  position: absolute;
+  top: 50px;
+  left: 60px;
+  display: block;
+  overflow: hidden;
+  background-image: url(../images/stars.svg);
+  background-repeat: repeat;
+}
+.hero h1 {
+  color: white;
+  font-size: 100px;
+  z-index: 22;
+  letter-spacing: -7px;
+  font-family: "Passion One", cursive;
+  margin-left: 5%;
+  line-height: 100px;
+  position: relative;
+}
+.hero h1 span {
+  position: relative;
+}
+.hero h1 span:first-of-type::before {
+  content: "<h1>";
+  font-family: "La Belle Aurore", cursive;
+  display: inline-block;
+  color: var(--greycolor);
+  font-size: var(--htmlTagsFontSize);
+  position: absolute;
+  line-height: unset;
+  letter-spacing: -1px;
+  top: -50px;
+  left: 0;
+}
+.hero h1 span:last-of-type::after {
+  content: "<h1>";
+  font-family: "La Belle Aurore", cursive;
+  display: inline-block;
+  color: var(--greycolor);
+  font-size: var(--htmlTagsFontSize);
+  position: absolute;
+  line-height: unset;
+  letter-spacing: -1px;
+  bottom: -40px;
+  left: 30px;
+}
+
+.hero h1 span:hover {
+  display: inline-block;
+  animation-duration: 1s;
+  color: var(--bluecolor);
+  transition: all 500ms;
+}
+
+.hero h1 span.o-letter {
+  color: var(--pinkColor);
+  text-shadow: -5px 0px 0px var(--bluecolor);
+  font-size: 180px;
+}
+
+.hero p {
+  font-family: "Montserrat", sans-serif;
+  color: grey;
+  font-size: 20px;
+  margin-left: 5%;
+  position: relative;
+  padding: 30px 10px;
+}
+
+.hero p::before {
+  content: "<p>";
+  font-family: "La Belle Aurore", cursive;
+  display: inline-block;
+  color: var(--greycolor);
+  font-size: var(--htmlTagsFontSize);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hero p::after {
+  content: "</p>";
+  font-family: "La Belle Aurore", cursive;
+  display: inline-block;
+  color: var(--greycolor);
+  font-size: var(--htmlTagsFontSize);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.hero button {
+  z-index: 2;
+  outline: none;
+  padding: 10px 30px;
+  border: 1px solid var(--bluecolor);
+  color: var(--bluecolor);
+  background-color: transparent;
+  font-size: 18px;
+  margin-left: 5%;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.hero button:hover {
+  background-color: var(--bluecolor);
+  animation: headShake;
+  display: inline-block;
+  animation-duration: 1s;
+  color: black;
+}
+
+.hero h6 {
+  position: absolute;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  transform: rotate(90deg);
+  animation-duration: 2500ms;
+  animation-iteration-count: infinite;
+  left: -15px;
+  bottom: 70px;
+}
+
+@media (max-width: 992px) {
+  .hero {
+    margin-left: 0px;
+  }
+
+  .hero h1 {
+    color: white;
+    font-size: 10vw;
+    line-height: 90%;
+    letter-spacing: -3px;
+  }
+
+  .hero h1 span.o-letter {
+    font-size: 25vw;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .hero h6 {
+    left: -15px;
+    bottom: 70px;
+  }
+}
+
+@media (max-height: 600px) {
+  .hero {
+    margin-left: 0px;
+  }
+
+  .hero h1 {
+    color: white;
+    line-height: 50px;
+    letter-spacing: -3px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .hero h6 {
+    left: 15px;
+    bottom: 20px;
+    transform: rotate(0deg);
+  }
+  .hero h6 svg {
+    transform: rotate(90deg);
+  }
+}
