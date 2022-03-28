@@ -476,7 +476,7 @@ nav.show {
   top: 0%;
   left: 5%;
   z-index: -1;
-  color: rgba(255, 255, 255, 0.01);
+  color: rgba(255, 255, 255, 0.025);
   font-size: 20vw;
   width: 100%;
 }
@@ -526,7 +526,6 @@ nav.show {
   position: relative;
   z-index: 1;
   width: calc(100% - 140px);
-  min-height: 100vh;
 }
 .skills::before {
   content: "Skills";
@@ -535,7 +534,7 @@ nav.show {
   top: 0%;
   left: 5%;
   z-index: -1;
-  color: rgba(255, 255, 255, 0.01);
+  color: rgba(255, 255, 255, 0.025);
   font-size: 20vw;
   width: 100%;
 }
@@ -589,5 +588,42 @@ nav.show {
   .skills .skills-set .skill {
     width: 100%;
     height: 60px;
+  }
+}
+
+/* Resume Div ----------------------------------------------------------------  */
+
+.resume {
+  height: 220px;
+  width: calc(100% - 140px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #131313;
+}
+.resume a {
+  text-decoration: none;
+  outline: none;
+  padding: 10px 30px;
+  border: 1px solid var(--bluecolor);
+  color: var(--bluecolor);
+  background-color: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.resume a:hover {
+  background-color: var(--bluecolor);
+  animation: headShake;
+  display: inline-block;
+  animation-duration: 1s;
+  color: black;
+}
+
+@media (max-width: 992px) {
+  .resume {
+    height: 180px;
+    width: 100%;
   }
 }
