@@ -51,3 +51,13 @@ mobileMenuBtn.addEventListener("click", () => {
     });
   });
 });
+
+// Random Colors for Skills
+const colors = ["#79f7d9", "#e94152", "#ff88ff", "#ff0000", "#ffcc00", "#0eff00", "#e91e63"];
+const mySkills = document.querySelectorAll(".skill");
+
+mySkills.forEach((skill) => {
+  let theRandomColor = colors[Math.floor(Math.random() * colors.length)];
+  console.log(theRandomColor);
+  skill.style.borderTop = `2px solid ${theRandomColor}`;
+});
