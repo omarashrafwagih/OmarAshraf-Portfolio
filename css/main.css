@@ -20,6 +20,7 @@
 }
 ::selection {
   background-color: transparent;
+  color: #7c4ef7;
 }
 *::before,
 *::after {
@@ -38,7 +39,6 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: var(--bodycolor);
   position: relative;
-  min-height: 6000px;
   overflow-x: hidden;
 }
 body::before {
@@ -90,33 +90,30 @@ h2 {
 }
 h2::before {
   content: "<h2>";
-  top: 0;
+  top: -10px;
   left: 0;
 }
 h2::after {
   content: "</h2>";
-  bottom: 0;
+  bottom: -10px;
   left: 0;
 }
 
-@media (max-width: 992px), (max-height: 600px) {
-  body.overflow-it {
-    overflow: hidden;
+@media (max-width: 992px) {
+  section {
+    margin-left: 0;
   }
   body::before {
-    left: 30px;
+    left: 20px;
   }
   body::after {
-    left: 30px;
+    left: 20px;
   }
   .menu-btn {
-    display: unset;
-  }
-  section {
-    margin-left: 0px;
+    display: block;
   }
   h2 {
-    font-size: 12vw;
+    margin-left: 2%;
   }
 }
 
@@ -207,66 +204,21 @@ nav .social a:hover {
 nav.show {
   display: unset;
 }
+
 @media (max-width: 992px) {
   nav {
     display: none;
-    color: white;
-    text-align: center;
-    width: 100vw;
-    z-index: 999;
-  }
-  nav .social {
-    margin-top: 0px;
-    padding: 0px;
-  }
-  nav .menu ul .empty-list-item {
-    display: none;
+    width: 100%;
+    height: 100vh;
+    z-index: 200;
   }
 }
-@media (max-height: 600px) {
-  nav {
-    display: none;
-    color: white;
-    text-align: center;
-    width: 100vw;
-    z-index: 999;
-  }
-
-  nav .top {
-    min-height: unset;
-    padding: 10px 0;
-  }
-  nav .top .logo {
-    padding: 10px 0;
-    font-size: 60px;
-    line-height: 30px;
-    transform: translateX(5px);
-  }
-  nav .menu ul li {
-    padding: 15px 0;
-    border-bottom: 1px solid rgb(81 81 82 / 50%);
-    transition: all 200ms;
-  }
-  nav .social {
-    margin-top: 10px;
-    padding: 0px;
-  }
-  nav .social a {
-    width: calc(100% / 3);
-    padding: 5px;
-    transition: all 200ms;
-  }
-  nav .social a:hover {
-    transform: translateY(0px);
-  }
-}
-
 /* Hero Section ----------------------------------------------------------------  */
 
 .hero {
   position: relative;
   overflow: hidden;
-  width: 100vw;
+  width: calc(100vw - 140px);
   min-height: 100vh;
   flex-direction: column;
   display: flex;
@@ -276,37 +228,28 @@ nav.show {
   background-position: bottom;
   background-size: cover;
 }
-.hero #particles-js {
+.hero .particles-js {
   width: 100%;
   height: 80%;
   position: absolute;
   top: 0;
 }
-.hero::before {
-  content: "<body>";
-  width: 100%;
-  height: 100%;
-  top: 50px;
-  left: 60px;
-  display: block;
-  overflow: hidden;
-}
 .hero h1 {
   color: white;
-  font-size: 100px;
   z-index: 22;
   letter-spacing: 7px;
   font-family: "Passion One", cursive;
-  margin-left: 5%;
   position: relative;
   line-height: 80%;
-  margin-bottom: 30px;
+  margin-left: 5%;
+  margin-bottom: 20px;
+  font-size: 10vw;
 }
 .hero h1 span {
   transition: all 500ms;
   color: var(--pinkColor);
   text-shadow: -5px 0px 0px var(--bluecolor);
-  font-size: 180px;
+  font-size: 16vw;
 }
 .hero h1::before {
   content: "<h1>";
@@ -322,22 +265,17 @@ nav.show {
   font-size: var(--htmlTagsFontSize);
   position: absolute;
   letter-spacing: -1px;
-  bottom: -50px;
+  bottom: -60px;
   left: 0;
-}
-
-.hero h1 span:hover {
-  display: inline-block;
-  animation-duration: 1s;
 }
 
 .hero p {
   font-family: "Montserrat", sans-serif;
   color: grey;
   font-size: 20px;
-  margin-left: 5%;
   position: relative;
   padding: 30px 10px;
+  margin-left: 5%;
 }
 
 .hero p::before {
@@ -359,10 +297,10 @@ nav.show {
   color: var(--bluecolor);
   background-color: transparent;
   font-size: 18px;
-  margin-left: 5%;
   margin-top: 20px;
   cursor: pointer;
   transition: all 300ms;
+  margin-left: 5%;
 }
 
 .hero button:hover {
@@ -374,34 +312,26 @@ nav.show {
 }
 
 @media (max-width: 992px) {
+  .hero {
+    width: 100%;
+  }
   .hero h1 {
-    color: white;
-    font-size: 10vw;
-    line-height: 90%;
-    letter-spacing: normal;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
   }
 
-  .hero h1 span {
-    font-size: 25vw;
+  .hero h1::before {
+    top: -30px;
   }
-
+  .hero h1::after {
+    bottom: -40px;
+  }
   .hero p {
     font-size: 16px;
   }
-}
 
-@media (max-height: 600px) {
-  .hero {
-    margin-left: 0px;
-  }
-
-  .hero h1 {
-    color: white;
-    line-height: 50px;
-  }
-
-  .hero p {
-    font-size: 18px;
+  .hero button {
+    font-size: 16px;
   }
 }
 
@@ -410,6 +340,7 @@ nav.show {
 .about {
   position: relative;
   z-index: 1;
+  width: calc(100% - 140px);
 }
 .about::before {
   content: "Who Am I ?";
@@ -430,37 +361,64 @@ nav.show {
   align-items: center;
   gap: 100px;
 }
+.about .img-container {
+  position: relative;
+}
+.about .img-container::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 100%;
+  height: calc(100% - 25px);
+  background-color: black;
+  z-index: 0;
+  background-image: url(../images/me/me1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
 .about img {
   max-width: 250px;
   margin-bottom: 20px;
-  transition: all 200ms;
+  transition: all 500ms;
+  position: relative;
+  mix-blend-mode: screen;
 }
-.about img:hover {
-  border-radius: 25px;
+.img-container:hover img {
+  mix-blend-mode: normal;
+  transform: translate(100px, 100px) scale(0.7);
 }
+
 .about p {
   max-width: 65ch;
   margin-bottom: 10px;
   font-size: 16px;
+  padding-bottom: 5px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .about {
+    width: 100%;
+  }
   .about .about-data {
+    margin-left: 0;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 0;
-    gap: 0;
   }
-  .about img {
-    border-radius: 15px;
+  .about .img-container::before {
+    top: 0px;
+    left: 0px;
   }
-  .about img:hover {
-    border-radius: 15px;
-  }
-  .about p {
-    padding-right: 15px;
+
+  .img-container:hover img {
+    transform: translate(-30%, -75px) scale(0.4);
   }
 }
+
 /* Skills Section ----------------------------------------------------------------  */
 
 .skills {
@@ -547,17 +505,28 @@ nav.show {
   .skills {
     width: 100%;
   }
+
   .skills .skills-set {
     margin-left: 0%;
-    width: 100%;
+    padding: 20px;
+    width: 95%;
+  }
+
+  .skills .skills-set .skill {
+    font-size: 16px;
+    margin-left: 30px;
+  }
+  .skills .skills-set .skill::after {
+    width: 8px;
+    height: 8px;
   }
 }
 
 /* Resume Section ----------------------------------------------------------------  */
 
 .resume {
-  padding: 50px 0;
   width: calc(100% - 140px);
+  padding: 50px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -603,16 +572,20 @@ nav.show {
   .resume {
     width: 100%;
   }
+  .resume a {
+    padding: 8px 25px;
+    font-size: 16px;
+  }
 }
 
-/* Work Section ----------------------------------------------------------------  */
+/* Portfolio Section ----------------------------------------------------------------  */
 
-.work {
-  position: relative;
+.portfolio {
   z-index: 1;
-  width: calc(100% - 180px);
+  width: calc(100% - 140px);
+  position: relative;
 }
-.work::before {
+.portfolio::before {
   content: "Portfolio";
   font-family: "Passion One", cursive;
   position: absolute;
@@ -622,4 +595,311 @@ nav.show {
   color: rgba(255, 255, 255, 0.025);
   font-size: 20vw;
   width: 100%;
+}
+
+.portfolio h3 {
+  margin-left: 5%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: inline-block;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.container {
+  margin-left: 5%;
+  padding-right: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "one one two three"
+    "one one four five"
+    "six seven eight eight"
+    "nine seven eight eight"
+    "ten seven eleven twelve";
+}
+.item {
+  aspect-ratio: 960 / 600;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  transition: all 300ms;
+  position: relative;
+}
+.item a {
+  overflow: hidden;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 100%;
+  width: 100%;
+  font-size: 150%;
+  text-decoration: none;
+  color: white;
+}
+.item:hover a {
+  display: flex;
+}
+.one {
+  background-image: url(../images/portfolio/github.png);
+  grid-area: one;
+}
+
+.two {
+  background-image: url(../images/portfolio/pokedextall.png);
+  grid-area: two;
+}
+
+.three {
+  background-image: url(../images/portfolio/azwebdev.png);
+  grid-area: three;
+}
+
+.four {
+  background-image: url(../images/portfolio/movieapptall.png);
+  grid-area: four;
+}
+
+.five {
+  background-image: url(../images/portfolio/bombo.png);
+  grid-area: five;
+}
+
+.six {
+  background-image: url(../images/portfolio/passwordgenerator.png);
+  grid-area: six;
+}
+
+.seven {
+  background-image: url(../images/portfolio/vercel.png);
+  aspect-ratio: 960 / 1860;
+  grid-area: seven;
+}
+
+.eight {
+  background-image: url(../images/portfolio/firefoxo.png);
+  grid-area: eight;
+}
+
+.nine {
+  background-image: url(../images/portfolio/js-calculator.png);
+  grid-area: nine;
+}
+.ten {
+  background-image: url(../images/portfolio/todolist.png);
+  grid-area: ten;
+}
+.eleven {
+  background-image: url(../images/portfolio/thesoloninja.png);
+  grid-area: eleven;
+}
+.twelve {
+  background-image: url(../images/portfolio/melony404.png);
+  grid-area: twelve;
+}
+
+@media (max-width: 992px) {
+  .portfolio {
+    width: 100%;
+  }
+
+  .container {
+    margin-left: 0;
+    padding-right: 0;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .item {
+    width: calc(50% - 10px);
+  }
+
+  .seven {
+    aspect-ratio: 960 / 600;
+  }
+}
+
+@media (max-width: 650px) {
+  .item {
+    width: 100%;
+  }
+}
+/* Contact Section ----------------------------------------------------------------  */
+.contact {
+  z-index: 1;
+  width: calc(100% - 140px);
+  position: relative;
+  padding-bottom: 0;
+}
+.contact::before {
+  content: "Get in touch";
+  font-family: "Passion One", cursive;
+  position: absolute;
+  top: 0%;
+  left: 5%;
+  z-index: -1;
+  color: rgba(255, 255, 255, 0.025);
+  font-size: 20vw;
+  width: 100%;
+}
+.contact .contact-conatiner {
+  min-height: 80vh;
+  margin-left: 5%;
+  display: flex;
+  gap: 40px;
+}
+.contact .contact-conatiner .left {
+  width: 50%;
+}
+
+.contact .contact-conatiner .right {
+  width: 50%;
+}
+
+.left p {
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 55px;
+  padding-left: 15px;
+}
+.left p::before {
+  content: "<p>";
+  top: -30px;
+  left: 0;
+}
+.left p::after {
+  content: "</p>";
+  bottom: -30px;
+  left: 0;
+}
+
+.left form {
+  position: relative;
+}
+
+.left form::before {
+  content: "<form>";
+  top: -30px;
+  left: 0;
+}
+.left form::after {
+  content: "</form>";
+  bottom: -40px;
+  left: 0;
+}
+.left form input {
+  color: var(--bluecolor);
+  background-color: #2a2a2a;
+  outline: none;
+  border: none;
+  margin-top: 15px;
+  padding: 7px 15px;
+  font-size: 18px;
+  width: calc(50% - 3px);
+}
+
+.left form input[name="subject"] {
+  width: 100%;
+}
+
+.left form textarea {
+  color: var(--bluecolor);
+  background-color: #2a2a2a;
+  outline: none;
+  border: none;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  margin-top: 15px;
+  padding: 7px 15px;
+  font-size: 18px;
+  min-height: 150px;
+}
+
+.left form button {
+  outline: none;
+  padding: 10px 30px;
+  border: 1px solid var(--bluecolor);
+  color: var(--bluecolor);
+  background-color: transparent;
+  font-size: 18px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.left form button:hover {
+  background-color: var(--bluecolor);
+  animation: headShake;
+  display: inline-block;
+  animation-duration: 1s;
+  color: black;
+}
+.right {
+  position: relative;
+}
+
+.right .map {
+  width: 100%;
+  height: 100%;
+}
+
+.right .map-tooltip {
+  line-height: 25px;
+  position: absolute;
+  top: 16%;
+  left: 5%;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  z-index: 2;
+}
+.right .map-tooltip span {
+  color: var(--bluecolor);
+}
+
+@media (max-width: 992px) {
+  .contact {
+    width: 100%;
+  }
+  .contact .contact-conatiner {
+    min-height: auto;
+    margin-left: 0%;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .contact .contact-conatiner .left {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .contact .contact-conatiner .right {
+    width: 100%;
+    height: 350px;
+  }
+  .left form input,
+  .left form textarea,
+  .left form button {
+    font-size: 16px;
+  }
+
+  .right .map {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .right .map-tooltip {
+    font-size: 14px;
+    line-height: 20px;
+    top: 20%;
+    padding: 12px;
+  }
 }

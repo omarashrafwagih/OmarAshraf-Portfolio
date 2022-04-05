@@ -35,7 +35,7 @@
           <a href="#"><li>Home</li> </a>
           <a href="#about"><li>About</li> </a>
           <a href="#skills"><li>Skills</li> </a>
-          <a href="#work"><li>Work</li> </a>
+          <a href="#portfolio"><li>portfolio</li> </a>
           <a href="#contact"><li>Contact</li> </a>
         </ul>
       </div>
@@ -51,11 +51,8 @@
     </nav>
 
     <section id="hero" class="hero">
-      <div id="particles-js"></div>
-      <h1>
-        Hi,<br />
-        I'm <span>O</span>mar Ashraf.
-      </h1>
+      <div class="particles-js" id="particles-js"></div>
+      <h1>Hi, I'm <span>O</span>mar Ashraf.</h1>
       <p>Telecommunication Engineer & Front-End Developer</p>
       <button onclick="location.href='#contact'">Contact Me !</button>
     </section>
@@ -63,11 +60,12 @@
     <section class="about" id="about">
       <h2>Me, Myself & I</h2>
       <div class="about-data">
-        <img src="./images/me.jpg" alt="me" />
+        <div class="img-container"><img src="./images/me/me3.jpg" alt="me" /></div>
         <div class="text">
-          <p>I’m an Egyptian Telecommunication Engineer & Front-End Developer Based in Saudi Arabia, Riyadh. I have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences.</p>
-          <p>Well-organised person, problem solver, independent employee with high attention to detail. Digital Creative, Pixel Master & Code Warrior.</p>
-          <p>Interested in the entire frontend spectrum and working on ambitious projects with positive people.</p>
+          <p>Egyptian Telecommunication Engineer & Front-End Developer.</p>
+          <p>Serious passionate about UI Design, animations and creating intuitive, dynamic user experiences.</p>
+          <p>Well-organised person, problem solver, independent employee with high attention to detail.</p>
+          <p>Digital Creative, Pixel Master & Code Warrior.</p>
         </div>
       </div>
     </section>
@@ -95,10 +93,52 @@
       <a target="_blank" href="./Omar Ashraf -Telecommunication Engineer & Front End Developer.pdf" download="Omar-Ashraf-Résumé">Download Résumé</a>
     </section>
 
-    <section id="work" class="work">
-      <h2>Work</h2>
+    <section id="portfolio" class="portfolio">
+      <h2>Portfolio</h2>
+      <h3>Click for Live Preview</h3>
+      <div class="container">
+        <div class="one item"><a target="_blank" href="https://githubyy.netlify.app/">Github</a></div>
+        <div class="two item"><a target="_blank" href="https://pokedexy.netlify.app/">Pokedex</a></div>
+        <div class="three item"><a target="_blank" href="https://azwebdev.netlify.app/">Az Web Dev</a></div>
+        <div class="four item"><a target="_blank" href="https://movieappbox.netlify.app/">Movies App</a></div>
+        <div class="five item"><a target="_blank" href="https://blueberryportfolio.netlify.app/">Blueberry Portfolio</a></div>
+        <div class="six item"><a target="_blank" href="https://passwordgeneratory.netlify.app/">Password Generator</a></div>
+        <div class="seven item"><a target="_blank" href="https://vercelcode.netlify.app/">Vercel</a></div>
+        <div class="eight item"><a target="_blank" href="https://firefoxo.netlify.app/">Firefoxo</a></div>
+        <div class="nine item"><a target="_blank" href="https://js-calcu.netlify.app/">Calculator</a></div>
+        <div class="ten item"><a target="_blank" href="https://todolisty.netlify.app/">Todos</a></div>
+        <div class="eleven item"><a target="_blank" href="https://thesoloninja.netlify.app/">The Solo Ninja</a></div>
+        <div class="twelve item"><a target="_blank" href="https://melony404.netlify.app/">Melony 404</a></div>
+      </div>
     </section>
 
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <div class="contact-conatiner">
+        <div class="left">
+          <p>I’m interested in freelance opportunities – especially ambitious or large projects. However, if you have other request or question, don’t hesitate to use the form.</p>
+
+          <form name="contact" method="POST" data-netlify="true" autocomplete="off">
+            <input class="empty" type="text" name="name" id="name" placeholder="Name" required />
+            <input class="empty" type="email" name="email" id="email" placeholder="E-mail" required />
+            <input class="empty" type="text" name="subject" id="subject" placeholder="Subject" required />
+            <textarea class="empty" name="message" id="message" placeholder="Message" required></textarea>
+            <button id="submit" type="submit">Send Message</button>
+          </form>
+        </div>
+        <div class="right">
+          <div class="map" id="map"></div>
+          <div class="map-tooltip">
+            Omar Ashraf<br />
+            Saudi Arabia, Riyadh.<br />
+            12831, Malaz<br />
+            <span>@:</span> omar_ashraf_93@hotmail.com
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTO8AhJubknCZReQskx0Z8aTzz7SInTpA"></script>
     <script src="js/jquery-3.6.0.slim.min.js"></script>
     <script src="js/tilt.jquery.min.js"></script>
     <script src="js/particles/particles.min.js"></script>

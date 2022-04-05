@@ -52,7 +52,7 @@ particlesJS(
         },
       },
       size: {
-        value: 3,
+        value: 2,
         random: true,
         anim: {
           enable: false,
@@ -84,7 +84,7 @@ particlesJS(
       },
     },
     interactivity: {
-      detect_on: "canvas",
+      detect_on: "window",
       events: {
         onhover: {
           enable: true,
@@ -105,8 +105,8 @@ particlesJS(
         },
         bubble: {
           distance: 200,
-          size: 20,
-          duration: 2,
+          size: 15,
+          duration: 20,
           opacity: 1,
           speed: 3,
         },
@@ -118,7 +118,7 @@ particlesJS(
           particles_nb: 4,
         },
         remove: {
-          particles_nb: 2,
+          particles_nb: 4,
         },
       },
     },
