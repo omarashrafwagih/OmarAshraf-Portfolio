@@ -893,7 +893,6 @@ nav.show {
   .right .map {
     width: 100%;
     height: 100%;
-    z-index: -1;
   }
   .right .map-tooltip {
     font-size: 14px;
