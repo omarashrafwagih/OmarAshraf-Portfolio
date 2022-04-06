@@ -16,6 +16,12 @@ mobileMenuBtn.addEventListener("click", () => {
   });
 });
 
+// ---------------------------------------------------------------------------------Append Wow Initialization
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  // Do Nothing
+} else {
+  new WOW().init();
+}
 // ---------------------------------------------------------------------------------------------------- Google Maps Restyling
 
 // When the window has finished loading create our google map below

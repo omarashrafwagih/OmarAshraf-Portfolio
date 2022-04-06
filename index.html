@@ -15,6 +15,7 @@
     <meta name="og:description" content="This Webpage is a Portfolio To Show Up My Work & Experiences" />
     <title>Omar Ashraf │ Portfolio</title>
 
+    <link rel="stylesheet" href="./css/animate.min.css" />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
 
@@ -23,7 +24,7 @@
 
     <nav>
       <div class="top">
-        <div class="logo">O</div>
+        <div class="logo wow animated rubberBand">O</div>
         <div class="name">Omar Ashraf</div>
         <div class="profession">Front-End Devloper</div>
       </div>
@@ -51,14 +52,14 @@
 
     <section id="hero" class="hero">
       <div class="particles-js" id="particles-js"></div>
-      <h1>Hi, I'm <span>O</span>mar Ashraf.</h1>
-      <p>Telecommunication Engineer & Front-End Developer</p>
-      <button onclick="location.href='#contact'">Contact Me !</button>
+      <h1 class="wow animted bounceInDown" data-wow-delay="1.3s">Hi, I'm <span>O</span>mar Ashraf.</h1>
+      <p class="wow animted bounceInDown" data-wow-delay="0.9s">Telecommunication Engineer & Front-End Developer</p>
+      <button class="wow animted bounceInDown" data-wow-delay="0.4s" onclick="location.href='#contact'">Contact Me !</button>
     </section>
 
     <section class="about" id="about">
-      <h2>Me, Myself & I</h2>
-      <div class="about-data">
+      <h2 class="wow animted fadeInRight" data-wow-offset="100">Me, Myself & I</h2>
+      <div class="about-data wow animated bounceInUp" data-wow-duration="2s" data-wow-offset="200">
         <div class="img-container"><img loading="lazy" src="./images/me/me2.jpg" alt="me" /></div>
         <div class="text">
           <p>Egyptian Telecommunication Engineer & Front-End Developer.</p>
@@ -70,8 +71,8 @@
     </section>
 
     <section id="skills" class="skills">
-      <h2>Skills</h2>
-      <div class="skills-set">
+      <h2 class="wow animted fadeInRight" data-wow-offset="100">Skills</h2>
+      <div class="skills-set wow animated bounceInUp" data-wow-duration="2s">
         <div class="skill">Html</div>
         <div class="skill">Css</div>
         <div class="skill">Bootstrap</div>
@@ -89,13 +90,13 @@
     </section>
 
     <section id="resume" class="resume">
-      <a target="_blank" href="./Omar Ashraf -Telecommunication Engineer & Front End Developer.pdf" download="Omar-Ashraf-Résumé">Download Résumé</a>
+      <a class="wow animated tada" data-wow-offset="100" target="_blank" href="./Omar Ashraf -Telecommunication Engineer & Front End Developer.pdf" download="Omar-Ashraf-Résumé">Download Résumé</a>
     </section>
 
     <section id="portfolio" class="portfolio">
-      <h2>Portfolio</h2>
+      <h2 class="wow animted fadeInRight" data-wow-offset="100">Portfolio</h2>
       <h3>Click for Live Preview</h3>
-      <div class="container">
+      <div class="container wow animated bounceInUp" data-wow-offset="300" data-wow-duration="2s">
         <div class="one item"><a target="_blank" href="https://githubyy.netlify.app/">Github</a></div>
         <div class="two item"><a target="_blank" href="https://pokedexy.netlify.app/">Pokedex</a></div>
         <div class="three item"><a target="_blank" href="https://azwebdev.netlify.app/">Az Web Dev</a></div>
@@ -112,8 +113,8 @@
     </section>
 
     <section id="contact" class="contact">
-      <h2>Contact Me</h2>
-      <div class="contact-conatiner">
+      <h2 class="wow animted fadeInRight" data-wow-offset="100">Contact Me</h2>
+      <div class="contact-conatiner wow animated bounceInUp" data-wow-duration="2s" data-wow-offset="200">
         <div class="left">
           <p>I’m interested in freelance opportunities – especially ambitious or large projects. However, if you have other request or question, don’t hesitate to use the form.</p>
 
@@ -137,10 +138,11 @@
       </div>
     </section>
 
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTO8AhJubknCZReQskx0Z8aTzz7SInTpA" defer></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTO8AhJubknCZReQskx0Z8aTzz7SInTpA"></script>
     <script src="https://kit.fontawesome.com/2d19cb643d.js" crossorigin="anonymous" defer></script>
     <script src="js/particles/particles.min.js" defer></script>
     <script src="js/particles/app.js" defer></script>
-    <script src="./js/main.js" defer></script>
+    <script src="./js/wow.min.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
