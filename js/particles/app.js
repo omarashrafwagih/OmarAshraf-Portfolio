@@ -84,7 +84,7 @@ particlesJS(
       },
     },
     interactivity: {
-      detect_on: "window",
+      detect_on: "canvas",
       events: {
         onhover: {
           enable: true,
