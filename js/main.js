@@ -222,3 +222,27 @@ function init() {
     title: "Snazzy!",
   });
 }
+
+// Loading Screen
+
+const loadingScreen = document.querySelector(".loading-page");
+const theBody = document.querySelector("body");
+
+window.addEventListener("load", () => {
+  let percent = 0;
+  let i = setInterval(() => {
+    document.querySelector(".percentage").textContent = percent + "%";
+    document.querySelector(".hr").style.width = percent + "%";
+
+    percent++;
+
+    if (percent == 101) {
+      clearInterval(i);
+      setInterval(() => {
+        // loadingScreen.style.display = "none";
+        loadingScreen.remove();
+        theBody.style.overflowY = "visible";
+      }, 150);
+    }
+  }, 25);
+});
