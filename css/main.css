@@ -909,7 +909,7 @@ nav.show {
   background: #0d0d0d;
   width: 100vw;
   height: 100vh;
-  z-index: 99;
+  z-index: 1001;
   display: flex;
   justify-content: center;
   align-items: center;
