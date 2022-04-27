@@ -1,38 +1,11 @@
-// Mobile Menu Button
-const mobileMenuBtn = document.getElementById("menu-btn");
-const myNav = document.querySelector("nav");
-const myNavLinks = document.querySelectorAll(".menu ul a");
-
-mobileMenuBtn.addEventListener("click", () => {
-  myNav.classList.toggle("show");
-  mobileMenuBtn.children[0].classList.toggle("fa-xmark");
-  mobileMenuBtn.children[0].classList.toggle("fa-bars-staggered");
-  document.body.classList.toggle("overflow-it");
-
-  myNavLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      mobileMenuBtn.click();
-    });
-  });
-});
-
-// ---------------------------------------------------------------------------------Append Wow Initialization
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-  // Do Nothing
-} else {
-  new WOW().init();
-}
-// ---------------------------------------------------------------------------------------------------- Google Maps Restyling
-
-// When the window has finished loading create our google map below
-google.maps.event.addDomListener(window, "load", init);
-
+// Google Maps Restyling -------------------------------------------------
+window.addEventListener("load", init);
 function init() {
   // Basic options for a simple Google Map
   // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
   var mapOptions = {
     // How zoomed in you want the map to start at (always required)
-    zoom: 3,
+    zoom: 4,
 
     // The latitude and longitude to center the map (always required)
     center: new google.maps.LatLng(24.6787261, 46.7296562), // Riyadh
@@ -48,7 +21,7 @@ function init() {
             saturation: 36,
           },
           {
-            color: "#79f7d9",
+            color: "#9adbca",
           },
           {
             lightness: 40,
@@ -216,19 +189,23 @@ function init() {
   var map = new google.maps.Map(mapElement, mapOptions);
 
   // Let's also add a marker while we're at it
-  var marker = new google.maps.Marker({
+  var markerKSA = new google.maps.Marker({
     position: new google.maps.LatLng(24.67847, 46.731499),
+    map: map,
+    title: "Snazzy!",
+  });
+  var markerEgypt = new google.maps.Marker({
+    position: new google.maps.LatLng(30.034767, 31.459845),
     map: map,
     title: "Snazzy!",
   });
 }
 
-// Loading Screen
-
+// Loading Screen -------------------------------------------------
 const loadingScreen = document.querySelector(".loading-page");
-const theBody = document.querySelector("body");
 
 window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
   let percent = 0;
   let i = setInterval(() => {
     document.querySelector(".percentage").textContent = percent + "%";
@@ -239,10 +216,42 @@ window.addEventListener("load", () => {
     if (percent == 101) {
       clearInterval(i);
       setInterval(() => {
-        // loadingScreen.style.display = "none";
+        loadingScreen.style.display = "none";
         loadingScreen.remove();
-        theBody.style.overflowY = "visible";
-      }, 150);
+        document.body.style.overflowY = "visible";
+      }, 120);
     }
-  }, 25);
+  }, 10);
 });
+
+// Notification On Right Click -------------------------------------------------
+document.body.addEventListener("contextmenu", (event) => {
+  event.preventDefault();
+  let notificationContainer = document.querySelector(".notification-container");
+  let myNotification = document.createElement("p");
+  myNotification.textContent = "Right Click Is Not Allowed 😈";
+  myNotification.classList.add("notification");
+  notificationContainer.appendChild(myNotification);
+
+  notificationContainer.children[0].play();
+
+  setTimeout(() => {
+    myNotification.remove();
+  }, 2500);
+});
+
+// Path Line SVG Draw Animation On Scroll -------------------------------------------------
+let path = document.querySelector("path");
+let pathLen = path.getTotalLength();
+
+path.style.strokeDasharray = pathLen + " " + pathLen;
+path.style.strokeDashoffset = pathLen;
+
+window.addEventListener("scroll", () => {
+  let scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+  let drawLength = pathLen * scrollPercentage;
+  path.style.strokeDashoffset = pathLen - drawLength;
+});
+
+// Updated Date In The Footer -------------------------------------------------
+document.getElementById("date").innerHTML = new Date().getFullYear();

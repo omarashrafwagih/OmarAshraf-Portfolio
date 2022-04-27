@@ -2,67 +2,92 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="theme-color" content="#79f7d9" />
+    <meta name="theme-color" content="#8463d8" />
     <link rel="icon" href="./images/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Omar Ashraf | Portfolio" />
     <meta name="copyright" content="Omar Ashraf" />
     <meta name="author" content="Omar Ashraf" />
-    <!-- Facebook        Metas       For       Sharing        Website       URL -->
+    <!-- Facebook Metas For Sharing Website URL -->
     <meta name="og:title" content="Omar Ashraf | Portfolio" />
     <meta name="og:type" content="Personal Portfolio" />
     <meta name="og:image" content="./images/webview.png" />
     <meta name="og:description" content="This Webpage is a Portfolio To Show Up My Work & Experiences" />
     <title>Omar Ashraf │ Portfolio</title>
 
-    <link rel="stylesheet" href="./css/animate.min.css" />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
 
   <body>
-    <div id="menu-btn" class="menu-btn"><i class="fa-solid fa-bars-staggered"></i></div>
+    <!-- Loading Page Screen -------------------------------------------- -->
+    <div class="loading-page">
+      <div class="counter">
+        <p>loading</p>
+        <span class="percentage">0%</span>
+        <hr class="hr" />
+      </div>
+    </div>
 
+    <!-- Notification For Right CLick -------------------------------------------- -->
+    <div class="notification-container">
+      <audio src="audio/error.mp3"></audio>
+    </div>
+
+    <div class="line-container">
+      <svg viewBox="0 0 16.353896 285.75079" preserveAspectRatio="xMidYMid meet" version="1.1" id="svg-line4">
+        <g id="layer-line4" transform="translate(-59.570075,-11.250221)">
+          <path
+            d="m 67.704466,11.250221 c 0,7.802563 -0.0677,41.833602 -0.0709,112.334479 0,3.13002 -1.45838,6.08541 -3.9452,7.99041 -5.04746,3.86557 -5.05037,10.19705 -0.007,14.0679 l 2.84506,2.18281 2.83845,2.17752 c 5.04243,3.87086 5.04243,10.19969 0,14.07054 l -2.83845,2.17753 -2.83924,2.18016 c -5.04137,3.86821 -5.04137,10.19969 0,14.0679 l 2.83924,2.18016 2.83845,2.18017 c 5.04243,3.86821 5.04243,10.19969 0,14.0679 -1.04934,0.80698 -1.66661,2.05581 -1.66661,3.37873 -0.0097,142.98409 0.04506,31.50701 0.04881,92.69455"
+            id="path-line4"
+            style="fill: none; stroke: #8463d8; stroke-width: 0.661458; stroke-dasharray: 315.657, 315.657; stroke-dashoffset: 105.117px"
+          ></path>
+        </g>
+      </svg>
+    </div>
+    <!-- Navbar -------------------------------------------- -->
     <nav>
-      <div class="top">
-        <div class="logo wow animated rubberBand">O</div>
-        <div class="name">Omar Ashraf</div>
-        <div class="profession">Front-End Devloper</div>
-      </div>
+      <ul>
+        <!-- <li class="empty-list-item">&nbsp;</li> -->
+        <a href="#"
+          ><li><i class="fa-solid fa-house"></i></li>
+        </a>
+        <a href="#about"
+          ><li><i class="fa-solid fa-user"></i></li>
+        </a>
+        <a href="#skills"
+          ><li><i class="fa-solid fa-code"></i></li>
+        </a>
+        <a href="#portfolio"
+          ><li><i class="fa-solid fa-briefcase"></i></li>
+        </a>
+        <a href="#contact"
+          ><li><i class="fa-solid fa-address-card"></i></li>
+        </a>
+      </ul>
+    </nav>
 
-      <div class="menu">
-        <ul>
-          <li class="empty-list-item">&nbsp;</li>
-          <a href="#"><li>Home</li> </a>
-          <a href="#about"><li>About</li> </a>
-          <a href="#skills"><li>Skills</li> </a>
-          <a href="#portfolio"><li>portfolio</li> </a>
-          <a href="#contact"><li>Contact</li> </a>
-        </ul>
-      </div>
-
+    <!-- Hero Section -------------------------------------------- -->
+    <section id="hero" class="hero">
+      <h1>Hi, I'm <span>O</span>mar Ashraf.</h1>
+      <p>Telecommunication Engineer & Front-End Developer</p>
       <div class="social">
         <a target="_blank" href="https://github.com/OmarAshraf-Bombo"><i class="fa-brands fa-github"></i></a>
         <a target="_blank" href="https://www.facebook.com/omar.ronaldo.ashraf√"> <i class="fa-brands fa-facebook-f"></i></a>
         <a target="_blank" href="https://www.instagram.com/omarashrafwagih/"><i class="fa-brands fa-instagram"></i></a>
         <a target="_blank" href="https://www.linkedin.com/in/omar-ashraf-wagih/"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a target="_blank" href="https://www.behance.net/OmarAshrafBombo"><i class="fa-brands fa-behance"></i></a>
+        <a target="_blank" href="https://codepen.io/Omar-Ashraf"><i class="fa-brands fa-codepen"></i></a>
         <a href="tel:+966598669925"><i class="fa-solid fa-phone"></i></a>
       </div>
-    </nav>
-
-    <section id="hero" class="hero">
-      <div class="particles-js" id="particles-js"></div>
-      <h1 class="wow animted bounceInDown" data-wow-delay="1.3s">Hi, I'm <span>O</span>mar Ashraf.</h1>
-      <p class="wow animted bounceInDown" data-wow-delay="0.9s">Telecommunication Engineer & Front-End Developer</p>
-      <button class="wow animted bounceInDown" data-wow-delay="0.4s" onclick="location.href='#contact'">Contact Me !</button>
+      <i class="fa-solid fa-chevron-down"></i>
     </section>
 
+    <!-- About Section -------------------------------------------- -->
     <section class="about" id="about">
-      <h2 class="wow animted fadeInRight" data-wow-offset="100">Me, Myself & I</h2>
-      <div class="about-data wow animated bounceInUp" data-wow-duration="2s" data-wow-offset="200">
+      <h2>Me, Myself & I</h2>
+      <div class="about-data">
         <div class="img-container"><img loading="lazy" src="./images/me/me2.jpg" alt="me" /></div>
         <div class="text">
-          <p>Egyptian Telecommunication Engineer & Front-End Developer.</p>
+          <p>Egyptian Telecommunication Engineer, Front-End Developer & Software Tester To Be.</p>
           <p>Serious passionate about UI Design, animations and creating intuitive, dynamic user experiences.</p>
           <p>Well-organised person, problem solver, independent employee with high attention to detail.</p>
           <p>Digital Creative, Pixel Master & Code Warrior.</p>
@@ -70,9 +95,10 @@
       </div>
     </section>
 
+    <!-- Skills Section -------------------------------------------- -->
     <section id="skills" class="skills">
-      <h2 class="wow animted fadeInRight" data-wow-offset="100">Skills</h2>
-      <div class="skills-set wow animated bounceInUp" data-wow-duration="2s">
+      <h2>Skills</h2>
+      <div class="skills-set">
         <div class="skill">Html</div>
         <div class="skill">Css</div>
         <div class="skill">Bootstrap</div>
@@ -81,6 +107,7 @@
         <div class="skill">EcmaScript 6</div>
         <div class="skill">Json</div>
         <div class="skill">Ajax</div>
+        <div class="skill">npm</div>
         <div class="skill">Github</div>
         <div class="skill">Cs50</div>
         <div class="skill">Adobe Photoshop</div>
@@ -89,14 +116,18 @@
       </div>
     </section>
 
+    <!-- Resume Section -------------------------------------------- -->
     <section id="resume" class="resume">
-      <a class="wow animated tada" data-wow-offset="100" target="_blank" href="./Omar Ashraf -Telecommunication Engineer & Front End Developer.pdf" download="Omar-Ashraf-Résumé">Download Résumé</a>
+      <a target="_blank" href="./Omar Ashraf -Telecommunication Engineer & Front End Developer.pdf" download="Omar-Ashraf-Résumé">Download Résumé</a>
+      <b>OR</b>
+      <img src="images/qrcode.svg" alt="" />
     </section>
 
+    <!-- Portfolio Section -------------------------------------------- -->
     <section id="portfolio" class="portfolio">
-      <h2 class="wow animted fadeInRight" data-wow-offset="100">Portfolio</h2>
+      <h2>Portfolio</h2>
       <h3>Click for Live Preview</h3>
-      <div class="container wow animated bounceInUp" data-wow-offset="300" data-wow-duration="2s">
+      <div class="container">
         <div class="one item"><a target="_blank" href="https://githubyy.netlify.app/">Github</a></div>
         <div class="two item"><a target="_blank" href="https://pokedexy.netlify.app/">Pokedex</a></div>
         <div class="three item"><a target="_blank" href="https://azwebdev.netlify.app/">Az Web Dev</a></div>
@@ -112,9 +143,10 @@
       </div>
     </section>
 
+    <!-- Contact Section -------------------------------------------- -->
     <section id="contact" class="contact">
-      <h2 class="wow animted fadeInRight" data-wow-offset="100">Contact Me</h2>
-      <div class="contact-conatiner wow animated bounceInUp" data-wow-duration="2s" data-wow-offset="200">
+      <h2>Contact Me</h2>
+      <div class="contact-conatiner">
         <div class="left">
           <p>I’m interested in freelance opportunities – especially ambitious or large projects. However, if you have other request or question, don’t hesitate to use the form.</p>
 
@@ -131,26 +163,20 @@
           <div class="map-tooltip">
             Omar Ashraf<br />
             Saudi Arabia, Riyadh.<br />
-            12831, Malaz<br />
+            Egypt, Cairo.<br />
             <span>@:</span> omar_ashraf_93@hotmail.com
           </div>
         </div>
       </div>
     </section>
 
-    <div class="loading-page">
-      <div class="counter">
-        <p>loading</p>
-        <span class="percentage">0%</span>
-        <hr class="hr" />
-      </div>
-    </div>
+    <!-- Footer  -------------------------------------------- -->
+    <footer>
+      <p class="blockquote-footer text-center">Copyright © <span id="date">Date Of The Year</span> Omar Ashraf Codes. All rights reserved.</p>
+    </footer>
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTO8AhJubknCZReQskx0Z8aTzz7SInTpA"></script>
-    <script src="https://kit.fontawesome.com/2d19cb643d.js" crossorigin="anonymous" defer></script>
-    <script src="js/particles/particles.min.js" defer></script>
-    <script src="js/particles/app.js" defer></script>
-    <script src="./js/wow.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="https://kit.fontawesome.com/2d19cb643d.js" crossorigin="anonymous"></script>
+    <script defer src="./js/main.js"></script>
   </body>
 </html>
