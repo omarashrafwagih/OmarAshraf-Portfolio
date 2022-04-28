@@ -15,7 +15,12 @@
     <meta name="og:description" content="This Webpage is a Portfolio To Show Up My Work & Experiences" />
     <title>Omar Ashraf │ Portfolio</title>
 
+    <link rel="stylesheet" href="css/animate.min.css" media="screen and (min-device-width: 800px)" />
+    <script src="js/wow.js" media="screen and (min-device-width: 800px)"></script>
     <link rel="stylesheet" href="./css/main.css" />
+    <script>
+      new WOW().init();
+    </script>
   </head>
 
   <body>
@@ -46,7 +51,7 @@
       </svg>
     </div>
     <!-- Navbar -------------------------------------------- -->
-    <nav>
+    <nav class="wow fadeIn slower" data-wow-delay="2s">
       <ul>
         <!-- <li class="empty-list-item">&nbsp;</li> -->
         <a href="#"
@@ -69,8 +74,8 @@
 
     <!-- Hero Section -------------------------------------------- -->
     <section id="hero" class="hero">
-      <h1>Hi, I'm <span>O</span>mar Ashraf.</h1>
-      <p>Telecommunication Engineer & Front-End Developer</p>
+      <h1 class="wow bounceInDown slower" data-wow-delay="1.2s">Hi, I'm <span>O</span>mar Ashraf.</h1>
+      <p class="wow bounceInDown slower" data-wow-delay="1s">Telecommunication Engineer & Front-End Developer</p>
       <div class="social">
         <a target="_blank" href="https://github.com/OmarAshraf-Bombo"><i class="fa-brands fa-github"></i></a>
         <a target="_blank" href="https://www.facebook.com/omar.ronaldo.ashraf√"> <i class="fa-brands fa-facebook-f"></i></a>
@@ -84,7 +89,7 @@
 
     <!-- About Section -------------------------------------------- -->
     <section class="about" id="about">
-      <h2>Me, Myself & I</h2>
+      <h2 class="wow flipInX" data-wow-offset="170">Me, Myself & I</h2>
       <div class="about-data">
         <div class="img-container"><img src="./images/me/me2.jpg" alt="me" /></div>
         <div class="text">
@@ -98,7 +103,7 @@
 
     <!-- Skills Section -------------------------------------------- -->
     <section id="skills" class="skills">
-      <h2>Skills</h2>
+      <h2 class="wow flipInX" data-wow-offset="170">Skills</h2>
       <div class="skills-set">
         <div class="skill">Html</div>
         <div class="skill">Css</div>
@@ -119,16 +124,16 @@
 
     <!-- Resume Section -------------------------------------------- -->
     <section id="resume" class="resume">
-      <a target="_blank" href="./Omar Ashraf -Telecommunication Engineer & Front End Developer.pdf" download="Omar-Ashraf-Résumé">Download Résumé</a>
+      <a class="wow bounceInLeft slow" data-wow-offset="140" target="_blank" href="./Omar Ashraf -Telecommunication Engineer & Front End Developer.pdf" download="Omar-Ashraf-Résumé">Download Résumé</a>
       <b>OR</b>
-      <img src="images/qrcode.svg" alt="" />
+      <img class="wow bounceInRight slow" data-wow-offset="140" src="images/qrcode.svg" alt="Resume QR Code" />
     </section>
 
     <!-- Portfolio Section -------------------------------------------- -->
     <section id="portfolio" class="portfolio">
-      <h2>Portfolio</h2>
-      <h3>Click for Live Preview</h3>
-      <div class="container">
+      <h2 class="wow flipInX" data-wow-offset="170">Portfolio</h2>
+      <h3 class="wow bounceInRight" data-wow-offset="160">Click for Live Preview</h3>
+      <div class="container wow slideInUp" data-wow-offset="160">
         <div class="one item"><a target="_blank" href="https://githubyy.netlify.app/">Github</a></div>
         <div class="two item"><a target="_blank" href="https://pokedexy.netlify.app/">Pokedex</a></div>
         <div class="three item"><a target="_blank" href="https://azwebdev.netlify.app/">Az Web Dev</a></div>
@@ -146,9 +151,9 @@
 
     <!-- Contact Section -------------------------------------------- -->
     <section id="contact" class="contact">
-      <h2>Contact Me</h2>
+      <h2 class="wow flipInX" data-wow-offset="170">Contact Me</h2>
       <div class="contact-conatiner">
-        <div class="left">
+        <div class="left wow bounceInLeft slow" data-wow-offset="140">
           <p>I’m interested in freelance opportunities – especially ambitious or large projects. However, if you have other request or question, don’t hesitate to use the form.</p>
 
           <form name="contact" method="POST" data-netlify="true" autocomplete="off">
@@ -159,7 +164,7 @@
             <button id="submit" type="submit">Send Message</button>
           </form>
         </div>
-        <div class="right">
+        <div class="right wow bounceInRight slow" data-wow-offset="140">
           <div class="map" id="map"></div>
           <div class="map-tooltip">
             Omar Ashraf<br />

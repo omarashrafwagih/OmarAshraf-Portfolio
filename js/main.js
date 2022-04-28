@@ -253,5 +253,14 @@ window.addEventListener("scroll", () => {
   path.style.strokeDashoffset = pathLen - drawLength;
 });
 
+// Remove WOW & Animate Library Classes In Small Screen Sizes -------------------------------------------------
+const screenWidth = document.body.offsetWidth;
+const wowElements = document.querySelectorAll(".wow");
+if (screenWidth < 800) {
+  wowElements.forEach((wowElement) => {
+    wowElement.classList.remove("wow");
+  });
+}
+
 // Updated Date In The Footer -------------------------------------------------
 document.getElementById("date").innerHTML = new Date().getFullYear();
