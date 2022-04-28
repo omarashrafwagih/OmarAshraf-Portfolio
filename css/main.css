@@ -68,10 +68,20 @@ h2 {
   right: 0;
   bottom: 0;
 }
+
 .loading-page .counter {
   text-align: center;
 }
+.loading-page .counter .o-logo {
+  font-family: "Passion One", cursive;
+  text-align: center;
+  color: var(--purpleColor);
+  text-shadow: -5px 0px 0px var(--bluecolor);
+  font-size: max(16vw);
+  line-height: 0;
+}
 .loading-page .counter p {
+  margin-top: 10px;
   font-size: 40px;
   font-weight: 100;
   color: var(--purpleColor);
@@ -89,6 +99,15 @@ h2 {
 .loading-page .counter {
   position: relative;
   width: 200px;
+}
+
+@media (max-width: 768px) {
+  .loading-page .counter .o-logo {
+    font-size: max(30vw);
+  }
+  .loading-page .counter p {
+    margin-top: 5px;
+  }
 }
 
 /* Notification ----------------------------------------------------------------  */
@@ -194,7 +213,6 @@ nav ul a li:hover {
 
 .hero h1 span {
   font-size: max(16vw);
-  transition: all 500ms;
   color: var(--purpleColor);
   text-shadow: -5px 0px 0px var(--bluecolor);
 }
