@@ -155,7 +155,8 @@ nav {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgb(37, 37, 37);
+  /* background-color: rgb(37, 37, 37); */
+  background-color: rgb(16, 16, 16);
   border-radius: 30px;
   z-index: 100;
   cursor: auto;
@@ -202,6 +203,7 @@ nav ul a li:hover {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  padding-bottom: 10%;
 }
 
 .hero h1 {
@@ -240,11 +242,6 @@ nav ul a li:hover {
 
 .hero .social a:hover {
   color: var(--bluecolor);
-}
-
-.hero > svg {
-  margin-top: 30px;
-  font-size: 30px;
 }
 
 @media (max-width: 768px) {

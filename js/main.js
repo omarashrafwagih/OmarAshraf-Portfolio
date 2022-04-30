@@ -253,6 +253,14 @@ window.addEventListener("scroll", () => {
   path.style.strokeDashoffset = pathLen - drawLength;
 });
 
+// Initialize WOW Animation -------------------------------------------------
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    new WOW().init();
+  }, 600);
+});
+
 // Remove WOW & Animate Library Classes In Small Screen Sizes -------------------------------------------------
 const screenWidth = document.body.offsetWidth;
 const wowElements = document.querySelectorAll(".wow");
