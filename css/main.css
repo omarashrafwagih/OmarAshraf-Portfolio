@@ -435,6 +435,12 @@ nav ul a li:hover {
 .skill:nth-of-type(14) {
   color: #d800e4;
 }
+.skill:nth-of-type(15) {
+  color: #0098e4;
+}
+.skill:nth-of-type(16) {
+  color: #84d88a;
+}
 
 @media (max-width: 992px) {
   .skills {
