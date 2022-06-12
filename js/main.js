@@ -240,19 +240,6 @@ document.body.addEventListener("contextmenu", (event) => {
   }, 2500);
 });
 
-// Path Line SVG Draw Animation On Scroll -------------------------------------------------
-let path = document.querySelector("path");
-let pathLen = path.getTotalLength();
-
-path.style.strokeDasharray = pathLen + " " + pathLen;
-path.style.strokeDashoffset = pathLen;
-
-window.addEventListener("scroll", () => {
-  let scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-  let drawLength = pathLen * scrollPercentage;
-  path.style.strokeDashoffset = pathLen - drawLength;
-});
-
 // Initialize WOW Animation -------------------------------------------------
 
 window.addEventListener("load", () => {
