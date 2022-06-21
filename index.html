@@ -1,294 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="theme-color" content="#8463d8" />
-    <link rel="icon" href="./images/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Omar Ashraf | Portfolio" />
-    <meta name="copyright" content="Omar Ashraf" />
-    <meta name="author" content="Omar Ashraf" />
-    <!-- Facebook Metas For Sharing Website URL -->
-    <meta name="og:title" content="Omar Ashraf | Portfolio" />
-    <meta name="og:type" content="Personal Portfolio" />
-    <meta name="og:image" content="./images/webview.png" />
-    <meta
-      name="og:description"
-      content="Telecommunication Engineer & Front-end Developer. I Design and Code Beautifully and I love what I do."
-    />
-    <title>Omar Ashraf │ Portfolio</title>
 
-    <link rel="stylesheet" href="css/animate.min.css" />
-    <script src="js/wow.js"></script>
-    <link rel="stylesheet" href="./css/main.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#8463d8" />
+  <link rel="icon" href="./images/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Omar Ashraf | Portfolio" />
+  <meta name="copyright" content="Omar Ashraf" />
+  <meta name="author" content="Omar Ashraf" />
+  <!-- Facebook Metas For Sharing Website URL -->
+  <meta name="og:title" content="Omar Ashraf | Portfolio" />
+  <meta name="og:type" content="Personal Portfolio" />
+  <meta name="og:image" content="./images/webview.png" />
+  <meta name="og:description"
+    content="Telecommunication Engineer & Front-end Developer. I Design and Code Beautifully and I love what I do." />
+  <title>Omar Ashraf │ Portfolio</title>
 
-  <body>
-    <!-- Loading Page Screen -------------------------------------------- -->
-    <div class="loading-page">
-      <div class="counter">
-        <span class="o-logo">O</span>
-        <p>loading</p>
-        <span class="percentage">0%</span>
-        <hr class="hr" />
+  <link rel="stylesheet" href="css/animate.min.css" />
+  <script src="js/wow.js"></script>
+  <!-- <link rel="stylesheet" href="./css/main.css" /> -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <!-- Loading Page Screen -------------------------------------------- -->
+  <div class="loading-page">
+    <div class="counter">
+      <span class="o-logo">O</span>
+      <p>loading</p>
+      <span class="percentage">0%</span>
+      <hr class="hr" />
+    </div>
+  </div>
+
+  <!-- Notification For Right CLick -------------------------------------------- -->
+  <div class="notification-container">
+    <audio src="audio/error.mp3"></audio>
+  </div>
+
+  <!-- Navbar -------------------------------------------- -->
+  <nav class="wow fadeIn" data-wow-delay="2s">
+    <ul>
+      <!-- <li class="empty-list-item">&nbsp;</li> -->
+      <a href="#">
+        <li><i class="fa-solid fa-house"></i></li>
+      </a>
+      <a href="#about">
+        <li><i class="fa-solid fa-user"></i></li>
+      </a>
+      <a href="#skills">
+        <li><i class="fa-solid fa-code"></i></li>
+      </a>
+      <a href="#portfolio">
+        <li><i class="fa-solid fa-briefcase"></i></li>
+      </a>
+      <a href="#contact">
+        <li><i class="fa-solid fa-address-card"></i></li>
+      </a>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -------------------------------------------- -->
+  <section id="hero" class="hero">
+    <h1 class="wow bounceInDown slower">Hi, I'm <span>O</span>mar Ashraf.</h1>
+    <p class="wow bounceInDown slower">
+      Telecommunication Engineer & Front-End Developer
+    </p>
+    <div class="social">
+      <a target="_blank" href="https://github.com/OmarAshraf-Bombo"><i class="fa-brands fa-github"></i></a>
+      <a target="_blank" href="https://www.facebook.com/omar.ronaldo.ashraf√">
+        <i class="fa-brands fa-facebook-f"></i></a>
+      <a target="_blank" href="https://www.instagram.com/omarashrafwagih/"><i class="fa-brands fa-instagram"></i></a>
+      <a target="_blank" href="https://www.linkedin.com/in/omar-ashraf-wagih/"><i
+          class="fa-brands fa-linkedin-in"></i></a>
+      <a target="_blank" href="https://codepen.io/Omar-Ashraf"><i class="fa-brands fa-codepen"></i></a>
+      <a href="tel:+966598669925"><i class="fa-solid fa-phone"></i></a>
+    </div>
+  </section>
+
+  <!-- About Section -------------------------------------------- -->
+  <section class="about" id="about">
+    <h2 class="wow fadeIn" data-wow-offset="170">Me, Myself & I</h2>
+    <div class="about-data">
+      <div class="img-container">
+        <img src="./images/me/me2.jpg" alt="me" />
+      </div>
+      <div class="text">
+        <p>
+          Egyptian Telecommunication Engineer, Front-End Developer & Software
+          Tester To Be.
+        </p>
+        <p>
+          Serious passionate about UI Design, animations and creating
+          intuitive, dynamic user experiences.
+        </p>
+        <p>
+          Well-organised person, problem solver, independent employee with
+          high attention to detail.
+        </p>
+        <p>Digital Creative, Pixel Master & Code Warrior.</p>
       </div>
     </div>
+  </section>
 
-    <!-- Notification For Right CLick -------------------------------------------- -->
-    <div class="notification-container">
-      <audio src="audio/error.mp3"></audio>
+  <!-- Skills Section -------------------------------------------- -->
+  <section id="skills" class="skills">
+    <h2 class="wow fadeIn" data-wow-offset="170">Skills</h2>
+    <div class="skills-set">
+      <div class="skill">Html</div>
+      <div class="skill">Css</div>
+      <div class="skill">Bootstrap</div>
+      <div class="skill">Sass</div>
+      <div class="skill">Javascript</div>
+      <div class="skill">EcmaScript 6</div>
+      <div class="skill">JS OOP</div>
+      <div class="skill">Json</div>
+      <div class="skill">Ajax</div>
+      <div class="skill">npm</div>
+      <div class="skill">Github</div>
+      <div class="skill">Regular Expressions</div>
+      <div class="skill">Cs50</div>
+      <div class="skill">Adobe Photoshop</div>
+      <div class="skill">Adobe XD</div>
+      <div class="skill">Figma</div>
     </div>
+  </section>
 
-    <!-- Navbar -------------------------------------------- -->
-    <nav class="wow fadeIn" data-wow-delay="2s">
-      <ul>
-        <!-- <li class="empty-list-item">&nbsp;</li> -->
-        <a href="#"
-          ><li><i class="fa-solid fa-house"></i></li>
-        </a>
-        <a href="#about"
-          ><li><i class="fa-solid fa-user"></i></li>
-        </a>
-        <a href="#skills"
-          ><li><i class="fa-solid fa-code"></i></li>
-        </a>
-        <a href="#portfolio"
-          ><li><i class="fa-solid fa-briefcase"></i></li>
-        </a>
-        <a href="#contact"
-          ><li><i class="fa-solid fa-address-card"></i></li>
-        </a>
-      </ul>
-    </nav>
+  <!-- Resume Section -------------------------------------------- -->
+  <section id="resume" class="resume">
+    <a class="wow bounceInLeft slow" data-wow-offset="140" target="_blank"
+      href="./Omar Ashraf -Telecommunication Engineer & Front End Developer.pdf" download="Omar-Ashraf-Résumé">Download
+      Résumé</a>
+    <b>OR</b>
+    <img class="wow bounceInRight slow" data-wow-offset="140" src="images/qrcode.svg" alt="Resume QR Code" />
+  </section>
 
-    <!-- Hero Section -------------------------------------------- -->
-    <section id="hero" class="hero">
-      <h1 class="wow bounceInDown slower">Hi, I'm <span>O</span>mar Ashraf.</h1>
-      <p class="wow bounceInDown slower">
-        Telecommunication Engineer & Front-End Developer
-      </p>
-      <div class="social">
-        <a target="_blank" href="https://github.com/OmarAshraf-Bombo"
-          ><i class="fa-brands fa-github"></i
-        ></a>
-        <a target="_blank" href="https://www.facebook.com/omar.ronaldo.ashraf√">
-          <i class="fa-brands fa-facebook-f"></i
-        ></a>
-        <a target="_blank" href="https://www.instagram.com/omarashrafwagih/"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
-        <a target="_blank" href="https://www.linkedin.com/in/omar-ashraf-wagih/"
-          ><i class="fa-brands fa-linkedin-in"></i
-        ></a>
-        <a target="_blank" href="https://codepen.io/Omar-Ashraf"
-          ><i class="fa-brands fa-codepen"></i
-        ></a>
-        <a href="tel:+966598669925"><i class="fa-solid fa-phone"></i></a>
+  <!-- Portfolio Section -------------------------------------------- -->
+  <section id="portfolio" class="portfolio">
+    <h2 class="wow fadeIn" data-wow-offset="170">Portfolio</h2>
+    <h3 class="wow bounceInRight" data-wow-offset="160">
+      Click for Live Preview
+    </h3>
+    <div class="container wow slideInUp" data-wow-offset="160">
+      <div class="one item">
+        <a target="_blank" href="https://githubyy.netlify.app/">Github</a>
       </div>
-    </section>
-
-    <!-- About Section -------------------------------------------- -->
-    <section class="about" id="about">
-      <h2 class="wow fadeIn" data-wow-offset="170">Me, Myself & I</h2>
-      <div class="about-data">
-        <div class="img-container">
-          <img src="./images/me/me2.jpg" alt="me" />
-        </div>
-        <div class="text">
-          <p>
-            Egyptian Telecommunication Engineer, Front-End Developer & Software
-            Tester To Be.
-          </p>
-          <p>
-            Serious passionate about UI Design, animations and creating
-            intuitive, dynamic user experiences.
-          </p>
-          <p>
-            Well-organised person, problem solver, independent employee with
-            high attention to detail.
-          </p>
-          <p>Digital Creative, Pixel Master & Code Warrior.</p>
-        </div>
+      <div class="two item">
+        <a target="_blank" href="https://pokedexy.netlify.app/">Pokedex</a>
       </div>
-    </section>
-
-    <!-- Skills Section -------------------------------------------- -->
-    <section id="skills" class="skills">
-      <h2 class="wow fadeIn" data-wow-offset="170">Skills</h2>
-      <div class="skills-set">
-        <div class="skill">Html</div>
-        <div class="skill">Css</div>
-        <div class="skill">Bootstrap</div>
-        <div class="skill">Sass</div>
-        <div class="skill">Javascript</div>
-        <div class="skill">EcmaScript 6</div>
-        <div class="skill">JS OOP</div>
-        <div class="skill">Json</div>
-        <div class="skill">Ajax</div>
-        <div class="skill">npm</div>
-        <div class="skill">Github</div>
-        <div class="skill">Regular Expressions</div>
-        <div class="skill">Cs50</div>
-        <div class="skill">Adobe Photoshop</div>
-        <div class="skill">Adobe XD</div>
-        <div class="skill">Figma</div>
+      <div class="three item">
+        <a target="_blank" href="https://azwebdev.netlify.app/">Az Web Dev</a>
       </div>
-    </section>
+      <div class="four item">
+        <a target="_blank" href="https://movieappbox.netlify.app/">Movies App</a>
+      </div>
+      <div class="five item">
+        <a target="_blank" href="https://blueberryportfolio.netlify.app/">Blueberry Portfolio</a>
+      </div>
+      <div class="six item">
+        <a target="_blank" href="https://passwordgeneratory.netlify.app/">Password Generator</a>
+      </div>
+      <div class="seven item">
+        <a target="_blank" href="https://vercelcode.netlify.app/">Vercel</a>
+      </div>
+      <div class="eight item">
+        <a target="_blank" href="https://firefoxo.netlify.app/">Firefoxo</a>
+      </div>
+      <div class="nine item">
+        <a target="_blank" href="https://js-calcu.netlify.app/">Calculator</a>
+      </div>
+      <div class="ten item">
+        <a target="_blank" href="https://todolisty.netlify.app/">Todos</a>
+      </div>
+      <div class="eleven item">
+        <a target="_blank" href="https://thesoloninja.netlify.app/">The Solo Ninja</a>
+      </div>
+      <div class="twelve item">
+        <a target="_blank" href="https://thepinkypawregex.netlify.app/">The Pinky Paw Regex</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Resume Section -------------------------------------------- -->
-    <section id="resume" class="resume">
-      <a
-        class="wow bounceInLeft slow"
-        data-wow-offset="140"
-        target="_blank"
-        href="./Omar Ashraf -Telecommunication Engineer & Front End Developer.pdf"
-        download="Omar-Ashraf-Résumé"
-        >Download Résumé</a
-      >
-      <b>OR</b>
-      <img
-        class="wow bounceInRight slow"
-        data-wow-offset="140"
-        src="images/qrcode.svg"
-        alt="Resume QR Code"
-      />
-    </section>
+  <!-- Contact Section -------------------------------------------- -->
+  <section id="contact" class="contact">
+    <h2 class="wow fadeIn" data-wow-offset="170">Contact Me</h2>
+    <div class="contact-conatiner">
+      <div class="left wow bounceInLeft slow" data-wow-offset="140">
+        <p>
+          I’m interested in freelance opportunities – especially ambitious or
+          large projects. However, if you have other request or question,
+          don’t hesitate to use the form.
+        </p>
 
-    <!-- Portfolio Section -------------------------------------------- -->
-    <section id="portfolio" class="portfolio">
-      <h2 class="wow fadeIn" data-wow-offset="170">Portfolio</h2>
-      <h3 class="wow bounceInRight" data-wow-offset="160">
-        Click for Live Preview
-      </h3>
-      <div class="container wow slideInUp" data-wow-offset="160">
-        <div class="one item">
-          <a target="_blank" href="https://githubyy.netlify.app/">Github</a>
-        </div>
-        <div class="two item">
-          <a target="_blank" href="https://pokedexy.netlify.app/">Pokedex</a>
-        </div>
-        <div class="three item">
-          <a target="_blank" href="https://azwebdev.netlify.app/">Az Web Dev</a>
-        </div>
-        <div class="four item">
-          <a target="_blank" href="https://movieappbox.netlify.app/"
-            >Movies App</a
-          >
-        </div>
-        <div class="five item">
-          <a target="_blank" href="https://blueberryportfolio.netlify.app/"
-            >Blueberry Portfolio</a
-          >
-        </div>
-        <div class="six item">
-          <a target="_blank" href="https://passwordgeneratory.netlify.app/"
-            >Password Generator</a
-          >
-        </div>
-        <div class="seven item">
-          <a target="_blank" href="https://vercelcode.netlify.app/">Vercel</a>
-        </div>
-        <div class="eight item">
-          <a target="_blank" href="https://firefoxo.netlify.app/">Firefoxo</a>
-        </div>
-        <div class="nine item">
-          <a target="_blank" href="https://js-calcu.netlify.app/">Calculator</a>
-        </div>
-        <div class="ten item">
-          <a target="_blank" href="https://todolisty.netlify.app/">Todos</a>
-        </div>
-        <div class="eleven item">
-          <a target="_blank" href="https://thesoloninja.netlify.app/"
-            >The Solo Ninja</a
-          >
-        </div>
-        <div class="twelve item">
-          <a target="_blank" href="https://thepinkypawregex.netlify.app/"
-            >The Pinky Paw Regex</a
-          >
+        <form name="contact" method="POST" data-netlify="true" autocomplete="off">
+          <input class="empty" type="text" name="name" id="name" placeholder="Name" required />
+          <input class="empty" type="email" name="email" id="email" placeholder="E-mail" required />
+          <input class="empty" type="text" name="subject" id="subject" placeholder="Subject" required />
+          <textarea class="empty" name="message" id="message" placeholder="Message" required></textarea>
+          <button id="submit" type="submit">Send Message</button>
+        </form>
+      </div>
+      <div class="right wow bounceInRight slow" data-wow-offset="140">
+        <div class="map" id="map"></div>
+        <div class="map-tooltip">
+          Omar Ashraf<br />
+          Saudi Arabia, Riyadh.<br />
+          Egypt, Cairo.<br />
+          <span>@:</span> omar_ashraf_93@hotmail.com
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Section -------------------------------------------- -->
-    <section id="contact" class="contact">
-      <h2 class="wow fadeIn" data-wow-offset="170">Contact Me</h2>
-      <div class="contact-conatiner">
-        <div class="left wow bounceInLeft slow" data-wow-offset="140">
-          <p>
-            I’m interested in freelance opportunities – especially ambitious or
-            large projects. However, if you have other request or question,
-            don’t hesitate to use the form.
-          </p>
+  <!-- Footer  -------------------------------------------- -->
+  <footer>
+    <p>
+      Copyright © <span id="date">Date Of The Year</span> Omar Ashraf Codes.
+      All rights reserved.
+    </p>
+  </footer>
 
-          <form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            autocomplete="off"
-          >
-            <input
-              class="empty"
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Name"
-              required
-            />
-            <input
-              class="empty"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="E-mail"
-              required
-            />
-            <input
-              class="empty"
-              type="text"
-              name="subject"
-              id="subject"
-              placeholder="Subject"
-              required
-            />
-            <textarea
-              class="empty"
-              name="message"
-              id="message"
-              placeholder="Message"
-              required
-            ></textarea>
-            <button id="submit" type="submit">Send Message</button>
-          </form>
-        </div>
-        <div class="right wow bounceInRight slow" data-wow-offset="140">
-          <div class="map" id="map"></div>
-          <div class="map-tooltip">
-            Omar Ashraf<br />
-            Saudi Arabia, Riyadh.<br />
-            Egypt, Cairo.<br />
-            <span>@:</span> omar_ashraf_93@hotmail.com
-          </div>
-        </div>
-      </div>
-    </section>
+  <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTO8AhJubknCZReQskx0Z8aTzz7SInTpA"></script>
+  <script src="https://kit.fontawesome.com/2d19cb643d.js" crossorigin="anonymous"></script>
+  <script defer src="./js/main.js"></script>
+</body>
 
-    <!-- Footer  -------------------------------------------- -->
-    <footer>
-      <p class="blockquote-footer text-center">
-        Copyright © <span id="date">Date Of The Year</span> Omar Ashraf Codes.
-        All rights reserved.
-      </p>
-    </footer>
-
-    <script
-      type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTO8AhJubknCZReQskx0Z8aTzz7SInTpA"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/2d19cb643d.js"
-      crossorigin="anonymous"
-    ></script>
-    <script defer src="./js/main.js"></script>
-  </body>
 </html>

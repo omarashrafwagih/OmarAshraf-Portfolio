@@ -1,0 +1,49 @@
+@use "../utilities/" as u;
+
+.resume {
+  width: 100%;
+  padding: u.pxToRem(40) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #13131346;
+  z-index: 1;
+  position: relative;
+  gap: u.pxToRem(20);
+  a {
+    text-decoration: none;
+    outline: none;
+    padding: u.pxToRem(10) u.pxToRem(30);
+    border: 1px solid u.$purplecolor;
+    color: u.$purplecolor;
+    background-color: transparent;
+    font-size: u.pxToRem(18);
+    cursor: pointer;
+    transition: all 300ms;
+    position: relative;
+    &:hover {
+      background-color: u.$purplecolor;
+      animation: headShake;
+      display: inline-block;
+      animation-duration: 1s;
+      color: black;
+    }
+  }
+  b {
+    font-size: u.pxToRem(18);
+  }
+  img {
+    max-width: u.pxToRem(180);
+  }
+}
+
+@media (max-width: 992px) {
+  .resume {
+    gap: u.pxToRem(20);
+    flex-direction: column;
+    a {
+      padding: u.pxToRem(8) u.pxToRem(25);
+      font-size: u.pxToRem(16);
+    }
+  }
+}

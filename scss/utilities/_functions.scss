@@ -1,0 +1,16 @@
+// Math Module
+@use "sass:math";
+
+// Converting Pixels To Rems
+
+@function pxToRem($pixels) {
+  // If Number is Unitless: Convert It To Rems.
+  @if (math.is-unitless($pixels)) {
+    // $pixels / 16
+    @return math.div($pixels, 16) + rem;
+  }
+  // If Nummber Has Unit: Return An Error.
+  @else {
+    @error "Error: Do Not Use Px After The Number (example: width: pxToRem(100)";
+  }
+}

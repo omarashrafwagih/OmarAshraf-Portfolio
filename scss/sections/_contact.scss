@@ -1,0 +1,153 @@
+@use "../utilities/" as u;
+
+.contact {
+  z-index: 1;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  padding-bottom: 0;
+  &::before {
+    content: "Get in touch";
+    font-family: u.$passion-one;
+    position: absolute;
+    text-align: center;
+    z-index: -1;
+    color: rgba(255, 255, 255, 0.025);
+    font-size: 20vw;
+    width: 100%;
+  }
+  .contact-conatiner {
+    min-height: 70vh;
+    display: flex;
+    gap: u.pxToRem(40);
+
+    .left {
+      width: 50%;
+      p {
+        position: relative;
+        margin-top: u.pxToRem(25);
+        margin-bottom: u.pxToRem(55);
+      }
+
+      form {
+        position: relative;
+        input {
+          color: u.$bluecolor;
+          background-color: #2a2a2a;
+          outline: none;
+          border: none;
+          margin-top: u.pxToRem(15);
+          padding: u.pxToRem(7) u.pxToRem(15);
+          font-size: u.pxToRem(18);
+          width: calc(50% - u.pxToRem(3));
+          &[name="subject"] {
+            width: 100%;
+          }
+        }
+        textarea {
+          color: u.$bluecolor;
+          background-color: #2a2a2a;
+          outline: none;
+          border: none;
+          width: 100%;
+          min-width: 100%;
+          max-width: 100%;
+          margin-top: u.pxToRem(15);
+          padding: u.pxToRem(7) u.pxToRem(15);
+          font-size: u.pxToRem(18);
+          min-height: u.pxToRem(15);
+        }
+        button {
+          outline: none;
+          padding: u.pxToRem(10) u.pxToRem(30);
+          border: 1px solid u.$purplecolor;
+          color: u.$purplecolor;
+          background-color: transparent;
+          font-size: u.pxToRem(18);
+          margin-top: u.pxToRem(15);
+          cursor: pointer;
+          transition: all 300ms;
+          &:hover {
+            background-color: u.$purplecolor;
+            animation: headShake;
+            display: inline-block;
+            animation-duration: 1s;
+            color: black;
+          }
+        }
+      }
+    }
+
+    .right {
+      width: 50%;
+      position: relative;
+      .map {
+        width: 100%;
+        height: 100%;
+      }
+      .map-tooltip {
+        position: absolute;
+        bottom: 10%;
+        left: 5%;
+        padding: u.pxToRem(15);
+        font-size: u.pxToRem(14);
+        background-color: rgba(0, 0, 0, 0.9);
+        color: white;
+        z-index: 2;
+        span {
+          color: u.$purplecolor;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .contact {
+    width: 100%;
+    .contact-conatiner {
+      min-height: auto;
+      margin-left: 0%;
+      flex-direction: column;
+      gap: u.pxToRem(20);
+      padding: u.pxToRem(20);
+      .left {
+        width: 100%;
+        form {
+          input,
+          textarea,
+          button {
+            font-size: u.pxToRem(16);
+          }
+        }
+      }
+      .right {
+        width: 100%;
+        height: u.pxToRem(350);
+        .map {
+          width: 100%;
+          height: 100%;
+        }
+        .map-tooltip {
+          padding: u.pxToRem(12);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .contact {
+    .contact-conatiner {
+      .left {
+        form {
+          input,
+          textarea,
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

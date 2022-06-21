@@ -1,0 +1,11 @@
+@use "../utilities/" as u;
+
+footer {
+  padding: u.pxToRem(20) 0 u.pxToRem(90) 0;
+  p {
+    text-align: center;
+    display: block;
+    font-size: 80%;
+    color: #6c757d;
+  }
+}

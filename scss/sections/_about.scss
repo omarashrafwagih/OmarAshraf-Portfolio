@@ -1,0 +1,93 @@
+@use "../utilities/" as u;
+
+.about {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  margin: auto;
+  &::before {
+    content: "Who Am I ?";
+    font-family: u.$passion-one;
+    position: absolute;
+    text-align: center;
+    z-index: -1;
+    color: rgba(255, 255, 255, 0.025);
+    font-size: 20vw;
+    width: 100%;
+  }
+  .about-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 80;
+    gap: 80px;
+    .img-container {
+      position: relative;
+      cursor: auto;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        width: 100%;
+        height: calc(100% - 25px);
+        background-color: black;
+        z-index: 0;
+        background-image: url(../images/me/me1.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+      &:hover {
+        img {
+          mix-blend-mode: normal;
+          transform: translate(100px, 100px) scale(0.7);
+        }
+      }
+
+      img {
+        z-index: 3;
+        max-width: 250px;
+        margin-bottom: 20px;
+        transition: all 500ms;
+        position: relative;
+        mix-blend-mode: screen;
+      }
+    }
+  }
+  p {
+    max-width: 65ch;
+    margin-bottom: 10px;
+    font-size: 16px;
+    padding-bottom: 5px;
+  }
+}
+
+@media (max-width: 992px) {
+  .about {
+    width: 100%;
+    .about-data {
+      text-align: center;
+      margin-left: 0;
+      padding: 30px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-direction: column;
+      .img-container {
+        &::before {
+          top: 0px;
+          left: 0px;
+        }
+        &:hover {
+          img {
+            transform: translate(-30%, -75px) scale(0.4);
+          }
+        }
+      }
+    }
+    .text {
+      background-color: #13131346;
+      padding: 10px;
+    }
+  }
+}

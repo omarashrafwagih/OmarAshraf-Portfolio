@@ -1,0 +1,56 @@
+@use "../utilities/" as u;
+
+.loading-page {
+  background: #0d0d0d;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  .counter {
+    text-align: center;
+    position: relative;
+    width: u.pxToRem(200);
+    .o-logo {
+      font-family: u.$passion-one;
+      text-align: center;
+      color: u.$purplecolor;
+      text-shadow: -5px 0px 0px u.$bluecolor;
+      font-size: max(16vw);
+      line-height: 0;
+    }
+    p {
+      margin-top: u.pxToRem(10);
+      font-size: u.pxToRem(40);
+      font-weight: 100;
+      color: u.$purplecolor;
+    }
+    span {
+      color: white;
+      font-size: u.pxToRem(60);
+      margin-top: u.pxToRem(-10);
+    }
+    hr {
+      background: u.$purplecolor;
+      border: none;
+      height: 1px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .loading-page .counter {
+    .o-logo {
+      font-size: max(30vw);
+    }
+    p {
+      margin-top: u.pxToRem(5);
+    }
+  }
+}

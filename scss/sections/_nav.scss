@@ -1,0 +1,40 @@
+@use "../utilities/" as u;
+
+nav {
+  width: u.pxToRem(300);
+  height: u.pxToRem(60);
+  position: fixed;
+  bottom: u.pxToRem(20);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(16, 16, 16);
+  border-radius: u.pxToRem(30);
+  z-index: 100;
+  cursor: auto;
+  ul {
+    height: 100%;
+    font-size: u.pxToRem(20);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    a {
+      text-decoration: none;
+      display: inline-block;
+      color: u.$purplecolor;
+      li {
+        transition: 250ms;
+        &:hover {
+          color: u.$bluecolor;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  nav {
+    width: 90%;
+    max-width: u.pxToRem(350);
+  }
+}

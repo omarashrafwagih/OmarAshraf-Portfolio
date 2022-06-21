@@ -1,0 +1,55 @@
+@use "../utilities/" as u;
+
+.skills {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  margin: auto;
+  &::before {
+    content: "Skills";
+    font-family: u.$passion-one;
+    position: absolute;
+    text-align: center;
+    z-index: -1;
+    color: rgba(255, 255, 255, 0.025);
+    font-size: 20vw;
+    width: 100%;
+  }
+  .skills-set {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    .skill {
+      display: inline-block;
+      margin-bottom: u.pxToRem(10);
+      font-size: u.pxToRem(18);
+      margin-left: u.pxToRem(40);
+      &::after {
+        content: "";
+        width: u.pxToRem(8);
+        height: u.pxToRem(8);
+        display: inline-block;
+        background-color: #494949;
+        border-radius: 50%;
+        margin-left: u.pxToRem(10);
+        margin-top: u.pxToRem(5);
+        line-height: 50%;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .skills {
+    width: 100%;
+    .skills-set {
+      margin-left: 0%;
+      padding: u.pxToRem(20);
+      width: 95%;
+      .skill {
+        font-size: u.pxToRem(16);
+        margin-left: u.pxToRem(30);
+      }
+    }
+  }
+}

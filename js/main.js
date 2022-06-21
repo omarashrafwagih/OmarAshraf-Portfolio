@@ -257,5 +257,23 @@ if (screenWidth < 800) {
   });
 }
 
+// Random Colors For Skills
+let colors = [
+  "#F9ED69",
+  "#95E1D3",
+  "#FFC7C7",
+  "#E23E57",
+  "#1FAB89",
+  "#D72323",
+  "#F0A500",
+  "#005F99",
+  "#06FF00",
+  "#1C6DD0",
+];
+const mySkills = document.querySelectorAll(".skill");
+mySkills.forEach((skill) => {
+  skill.style.color = colors[Math.floor(Math.random() * colors.length)];
+});
+
 // Updated Date In The Footer -------------------------------------------------
 document.getElementById("date").innerHTML = new Date().getFullYear();
