@@ -190,7 +190,7 @@ function init() {
 
   // Let's also add a marker while we're at it
   var markerKSA = new google.maps.Marker({
-    position: new google.maps.LatLng(24.67847, 46.731499),
+    position: new google.maps.LatLng(24.7696218, 46.7681973),
     map: map,
     title: "Snazzy!",
   });
